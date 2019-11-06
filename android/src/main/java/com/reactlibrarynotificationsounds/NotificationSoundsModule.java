@@ -55,6 +55,7 @@ public class NotificationSoundsModule extends ReactContextBaseJavaModule {
             newSound.putString("title", notificationTitle);
             newSound.putString("url", notificationUri + "/" + id );
             newSound.putString("soundID", id );
+            newSound.putBoolean("default",RingtoneManager.isDefault(notificationUri));
 
             list.pushMap(newSound);
             Log.d("getNotifications: ", notificationUri + id);
